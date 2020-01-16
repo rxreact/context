@@ -20,8 +20,7 @@ describe("ClickCounter", () => {
 
     beforeEach(() => {
       signals = {
-        ...signalGraph(),
-        clickCount$: of(1)
+        ...signalGraph()
       };
 
       props = {
