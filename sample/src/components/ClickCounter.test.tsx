@@ -12,7 +12,7 @@ import { signalGraph, SignalGraph } from "../signals/SignalGraph";
 import { SignalGraphContext } from "../signals/SignalGraphContext";
 import { watchSignal } from "../test/signals";
 
-describe("connect", () => {
+describe("ClickCounter", () => {
   describe("mount connected component test", () => {
     let wrapper: ReactWrapper;
     let props: ClickCounterProps;
@@ -20,7 +20,8 @@ describe("connect", () => {
 
     beforeEach(() => {
       signals = {
-        ...signalGraph()
+        ...signalGraph(),
+        clickCount$: of(1)
       };
 
       props = {

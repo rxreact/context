@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@rxreact/connect": "file:../../connect",
+    "@rxreact/context": "file:../../context",
     "@rxreact/core": "^5.1.1",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.17",
@@ -24,8 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prestart": "rm -rf ./node_modules/@rxreact/connect/node_modules",
-    "pretest": "rm -rf ./node_modules/@rxreact/connect/node_modules"
+    "prestart": "rm -rf ./node_modules/@rxreact/context/node_modules",
+    "pretest": "rm -rf ./node_modules/@rxreact/context/node_modules"
   },
   "eslintConfig": {
     "extends": "react-app"

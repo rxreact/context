@@ -10,7 +10,7 @@ import * as ReactDom from "react-dom";
 
 const pkg = require("./package.json");
 
-const libraryName = "connect";
+const libraryName = "context";
 
 export default {
   input: `src/${libraryName}.ts`,
@@ -32,8 +32,8 @@ export default {
     commonjs({
       include: "node_modules/**",
       namedExports: {
-        react: Object.keys(React),
-        "react-dom": Object.keys(ReactDom)
+        // Rollup was having problems with importing React
+        react: Object.keys(React)
       }
     }),
     // Allow node_modules resolution, so you can use 'external' to control

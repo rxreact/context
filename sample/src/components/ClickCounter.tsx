@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Observable, combineLatest } from "rxjs";
 import { map } from "rxjs/operators";
-import { getProp, connect } from "@rxreact/connect";
+import { getProp, connect } from "@rxreact/context";
 
 import { SignalGraph } from "../signals/SignalGraph";
 import { SignalGraphContext } from "../signals/SignalGraphContext";

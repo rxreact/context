@@ -1,11 +1,11 @@
 {
-  "name": "connect",
+  "name": "@rxreact/context",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/connect.umd.js",
-  "module": "dist/connect.es5.js",
-  "typings": "dist/types/connect.d.ts",
+  "main": "dist/context.umd.js",
+  "module": "dist/context.es5.js",
+  "typings": "dist/types/context.d.ts",
   "files": [
     "dist"
   ],
