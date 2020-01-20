@@ -20,15 +20,15 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "lint": "npm-run-all -c lint:*",
     "lint:eslint": "eslint '**/*.{ts,tsx}'",
-    "lint:prettier": "prettier --check '**/*.{tsx,ts,css,html,md,json}'",
+    "lint:prettier": "prettier --check '**/*.{tsx,ts,css,html,md,json,yml}'",
     "format": "npm-run-all -c format:*",
     "format:eslint": "eslint --fix '**/*.{ts,tsx}'",
-    "format:prettier": "prettier --write '**/*.{tsx,ts,css,html,md,json}'",
+    "format:prettier": "prettier --write '**/*.{tsx,ts,css,html,md,json,yml}'",
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
     "start": "rollup -c rollup.config.ts -w",
@@ -48,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{tsx,ts,css,html,md,json}": [
+    "**/*.{tsx,ts,css,html,md,json,yml}": [
       "prettier --write",
       "git add"
     ]
