@@ -44,7 +44,7 @@ You can see a full working sample application [here](./sample).
 
 ### Setup Global Store
 
-To set up the `rxreact/context` store, you will need pieces: a global `SignalGraph`, a `SignalGraphContext`, and to add the `SignalGraphProvider` to your `App.tsx`.
+To set up the `rxreact/context` store, you will need a few pieces: a global `SignalGraph`, a `SignalGraphContext`, and to add the `SignalGraphProvider` to your `App.tsx`.
 
 ```typescript
 // src/signals/signal-graph.ts
@@ -54,6 +54,7 @@ import { scan, startWith, shareReplay } from "rxjs/operators";
 // For typescript, export a type for use by viewModelFactories
 export type SignalGraph = ReturnType<typeof signalGraph>;
 
+/** A function to generate the global signal graph */
 export const signalGraph = () => {
   const onClick$ = new Subject<void>();
 
